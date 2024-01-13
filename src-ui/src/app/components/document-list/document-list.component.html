@@ -148,13 +148,6 @@
       <table class="table table-sm align-middle border shadow-sm">
         <thead>
           <th></th>
-          <th class="d-none d-lg-table-cell"
-            pngxSortable="archive_serial_number"
-            title="Sort by ASN" i18n-title
-            [currentSortField]="list.sortField"
-            [currentSortReverse]="list.sortReverse"
-            (sort)="onSort($event)"
-          i18n>ASN</th>
           <th class="d-none d-md-table-cell"
             pngxSortable="correspondent__name"
             title="Sort by correspondent" i18n-title
@@ -223,9 +216,6 @@
                   <input type="checkbox" class="form-check-input" id="docCheck{{d.id}}" [checked]="list.isSelected(d)" (click)="toggleSelected(d, $event); $event.stopPropagation();">
                   <label class="form-check-label" for="docCheck{{d.id}}"></label>
                 </div>
-              </td>
-              <td class="d-none d-lg-table-cell">
-                {{d.archive_serial_number}}
               </td>
               <td class="d-none d-md-table-cell">
                 @if (d.correspondent) {
